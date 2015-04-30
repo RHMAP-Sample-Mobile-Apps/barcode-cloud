@@ -1,25 +1,25 @@
-# FeedHenry Hello World MBaaS Server
+# Barcode Lookup
 
-This is a blank 'hello world' FeedHenry MBaaS. Use it as a starting point for building your APIs. 
+This service looks up a barcode by UPC id. It connects with a SOAP service, takes a mixed SOAP and CSV response, and returns JSON back to the client, more effectively mobilising the service.
 
 # Group Hello World API
 
 # hello [/hello]
 
-'Hello world' endpoint.
+'Barcode Lookup' endpoint.
 
 ## hello [POST] 
 
-'Hello world' endpoint.
+'Barcode lookup' endpoint.
 
 + Request (application/json)
     + Body
             {
-              "hello": "world"
+              "barcode": "9780201896831"
             }
 
 + Response 200 (application/json)
     + Body
-            {
-              "msg": "Hello world"
-            }
+            [
+              "Some product data goes here"
+            ]
